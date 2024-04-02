@@ -136,8 +136,8 @@ public class RttTask {
                                                                         .put("accessKey", ossAccessKey) // Access key of oss
                                                                         .put("secretKey", ossSecretKey) // Secret key of oss
                                                                         .put("bucket", ossBucketName) // Oss bucket name
-                                                                        .put("vendor", ossBucketVendor) // Your Oss Vendor ID
-                                                                        .put("region", ossBucketRegion) // Your Oss Region ID
+                                                                        .put("vendor", Integer.parseInt(ossBucketVendor)) // Your Oss Vendor ID
+                                                                        .put("region", Integer.parseInt(ossBucketRegion)) // Your Oss Region ID
                                                                         .put("fileNamePrefix",
                                                                                 new JSONArray() // An array of directory strings to append to storage files
                                                                                         .put(ossBucketFolder)
