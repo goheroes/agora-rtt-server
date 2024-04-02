@@ -26,8 +26,8 @@ public class RttTask {
     private String ossSecretKey = System.getenv("OSS_SECRET_KEY"); 
     private String ossAccessKey = System.getenv("OSS_ACCESS_KEY");
     private String ossBucketName = System.getenv("OSS_BUCKET_NAME"); 
-    private int ossBucketVendor = System.getenv("OSS_BUCKET_VENDOR"); 
-    private int ossBucketRegion = System.getenv("OSS_BUCKET_REGION"); 
+    private String ossBucketVendor = System.getenv("OSS_BUCKET_VENDOR"); 
+    private String ossBucketRegion = System.getenv("OSS_BUCKET_REGION"); 
     private String ossBucketFolder = System.getenv("OSS_BUCKET_FOLDER"); 
     private String ossBucketSubFolder = System.getenv("OSS_BUCKET_SUB_FOLDER"); 
     private static final String baseUrl = "https://api.agora.io";
