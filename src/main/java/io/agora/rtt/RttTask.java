@@ -142,7 +142,7 @@ public class RttTask {
                                                                                 new JSONArray() // An array of directory strings to append to storage files
                                                                                         .put(ossBucketFolder)
                                                                                         .put(ossBucketSubFolder))))))));
-        // System.out.println("startConfig: " + startConfig.toString());
+        System.out.println("startConfig: " + startConfig.toString());
         MediaType mediaType = MediaType.parse("application/json");
         // Set the request body
         RequestBody body = RequestBody.create(startConfig.toString(), mediaType);
