@@ -29,7 +29,6 @@ public class RttTask {
     private String ossBucketVendor = System.getenv("OSS_BUCKET_VENDOR"); 
     private String ossBucketRegion = System.getenv("OSS_BUCKET_REGION"); 
     private String ossBucketFolder = System.getenv("OSS_BUCKET_FOLDER"); 
-    private String ossBucketSubFolder = System.getenv("OSS_BUCKET_SUB_FOLDER"); 
     private static final String baseUrl = "https://api.agora.io";
     
     // Authorization header for HTTP requests
@@ -161,8 +160,8 @@ public class RttTask {
                     status = jsonObject.getString("status");
                     taskId = jsonObject.getString("taskId");
                     if (status.equals("IN_PROGRESS") || status.equals("STARTED")) {
-                        // System.out.println(
-                        //         "RTT task started for channel: " + channelName + " ID: " + taskId);
+                        System.out.println(
+                                "RTT task started for channel: " + channelName + " ID: " + taskId);
                         System.out.println("startConfig: " + startConfig.toString());
 
                         // Confirm success
