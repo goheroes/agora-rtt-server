@@ -40,7 +40,7 @@ public class RttTask {
     public String language = "en-US"; // Max 2 simultaneous languages are supported, separated by a comma.
     public String taskId = ""; // Holds the ID of the RTT task
     public int userId; // Identifies the user who sent the start request
-    public int maxIdleTime = 1; // If there is no activity of this time, the task stops automatically.
+    public int maxIdleTime = 10; // If there is no activity of this time, the task stops automatically.
 
     // Unique uids to access the audio in the channel, and send the text
     private int uidAudio = 111, uidText = 222; 
