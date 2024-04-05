@@ -36,7 +36,6 @@ public class RttTask {
             .encode((customerId + ":" + customerSecret).getBytes()));;
     
     public String channelName; // The channel for the RTT task
-    public String locale; // The locale for the RTT task
     public String status; // Holds the last status returned
     public String language; // Max 2 simultaneous languages are supported, separated by a comma.
     public String taskId = ""; // Holds the ID of the RTT task
@@ -50,10 +49,10 @@ public class RttTask {
     private String builderToken; // The builder token required to send start, query and stop requests
     private String instanceId; // A string that identifies the RTT task
     
-    public RttTask(int userId, String channelName, String locale) {
+    public RttTask(int userId, String channelName, String language) {
         this.userId = userId;
         this.channelName = channelName;
-        this.language = locale;
+        this.language = language;
         // InstanceId can be any unique string, best practice is to set it to the channel name.
         instanceId = channelName; 
     }
