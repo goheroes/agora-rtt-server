@@ -54,12 +54,13 @@ public class Handlers {
 			// Read JSON body
 			JSONObject jsonObj = getBodyJSON(he);
 			String channelName = (String) jsonObj.get("channelName");
+			String locale = (String) jsonObj.get("locale");
 			int UserId = Integer.valueOf(jsonObj.get("UserId").toString()); 
 
 			// Add code here to check user privileges and payment options
 
 			// If everything is OK, create and configure an RTT task
-			RttTask rttTask = new RttTask(UserId, channelName);
+			RttTask rttTask = new RttTask(UserId, channelName, locale);
 			// Start the task
 			RttResult result = rttTask.startTranscription(); 
 			// Store the task in a task list for later actions
