@@ -7,7 +7,7 @@ public class TaskList {
     private HashMap<String, RttTask> tasks = new HashMap<>();
 
     public void addTask(RttTask task) {
-        tasks.put(task.channelName, task, locale);
+        tasks.put(task.channelName, task, task.locale);
     }
 
     public void removeTask(String channelName) {
